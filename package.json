@@ -1,0 +1,33 @@
+{
+  "name": "hello-world-repo",
+  "version": "1.0.0",
+  "private": true,
+  "author": {
+    "name": "Sushant Sahu",
+    "email": "sushant87@gmail.com"
+  },
+  "contributors": [
+    {
+      "name": "Sushant Sahu",
+      "email": "sushant87@gmail.com"
+    },
+    {
+      "name": "Khushboo Sewak",
+      "email": "khushboo.sewak2009@gmail.com"
+    }
+  ],
+  "scripts": {
+    "start:server": "node packages/hello-world-server/.",
+    "start:web": "cd packages/hello-world-webapp && yarn start",
+    "start:apps": "lerna run start",
+    "start:apps:seq": "lerna run start --scope=@ssahu/{hello-world-webapp,hello-world-server}",
+    "new-version":"lerna version --conventional-commits --yes",
+    "diff":"lerna diff"
+  },
+  "devDependencies": {
+    "lerna": "^3.20.2"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}
