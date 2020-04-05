@@ -23,7 +23,8 @@
     "start:apps:seq": "lerna run start --scope=@ssahu/{hello-world-webapp,hello-world-server}",
     "new-version":"lerna version --conventional-commits --yes",
     "diff":"lerna diff",
-    "commit": "npx git-cz"
+    "commit": "npx git-cz",
+    "test":"lerna run test --since"
   },
   "devDependencies": {
     "lerna": "^3.20.2"
